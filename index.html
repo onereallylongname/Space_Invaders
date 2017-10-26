@@ -11,22 +11,118 @@
   <script type="text/javascript" src="lib/shot.js"></script>
   <script type="text/javascript" src="lib/invader.js"></script>
   <script type="text/javascript" src="lib/sounds.js"></script>
+  <script type="text/javascript" src="lib/stars.js"></script>
   <style>
     body {
       margin: 0;
       padding: 0;
     }
 
-    #div_GameCanvas {
-      width: 50%;
-      margin: 0 auto;
+    #container {
+      display: flex;
+      /* establish flex container */
+      flex-direction: row;
+      /* default value; can be omitted */
+      flex-wrap: nowrap;
+      /* default value; can be omitted */
+      justify-content: space-between;
+    }
+
+    .container {
+      margin: 20px;
+      color: white;
+    }
+
+    .container ul {
+      list-style-type: none;
+      text-align: left;
+    }
+
+    #wrapper {
+      height: 100%;
+      text-align: center;
+      background-color: #101010;
+    }
+    .text {
+      text-align: justify;
+    }
+
+    #header {
+      padding: 10px;
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+      height: 50px;
+      background-color: #7d8da5;
+      background: -webkit-linear-gradient(#5e6a7c, #7f90a8);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#5e6a7c, #7f90a8);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#5e6a7c, #7f90a8);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#5e6a7c, #7f90a8);
+      /* Standard syntax */
+    }
+
+    #header h1 {
+      color: #e6e600;
+      text-shadow: 4px 3px black;
+      font-weight: bold;
+    }
+
+    #footer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      border-top-right-radius: 50px;
+      border-top-left-radius: 50px;
+      text: white;
+      height: 30px;
+      background-color: #7d8da5;
+      background: -webkit-linear-gradient(#7f90a8, #5e6a7c);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#7f90a8, #5e6a7c);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#7f90a8, #5e6a7c);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#7f90a8, #5e6a7c);
+      /* Standard syntax */
     }
   </style>
 </head>
 
 <body>
-    <div id="div_GameCanvas">
+  <div id="wrapper">
+    <div id="header">
+      <h1>Space Invaders</h1>
     </div>
+    <div id="container">
+      <div class="container">
+        <div id="div_GameCanvas">
+        </div>
+      </div>
+
+      <div class="container">
+        <br>
+        <ul>
+          <li>Arrows to move &#8592; &#8594;</li>
+          <li>Spacebar to shoot</li>
+        </ul>
+        <br>
+        <div class="text">
+          <p>Shoot the invaders. A hit gives you points, and a miss makes you lose points.</p>
+          <p>Your luck is tied to your accuracy, try not to miss.</p>
+          <p> NOTE: Allowing the use of the microphone improves the experience (no sound is recorded, but the the sound intensity is monitored to make the stars blink).</p>
+        </div>
+        <br>
+        <p>Good luck!</p>
+      </div>
+    </div>
+  <div id="footer">
+    Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
+  </div>
+  </div>
 </body>
 
 </html>
