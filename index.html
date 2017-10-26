@@ -18,14 +18,14 @@
       padding: 0;
     }
 
-    #container {
+    .lr_container {
       display: flex;
       /* establish flex container */
       flex-direction: row;
       /* default value; can be omitted */
       flex-wrap: nowrap;
       /* default value; can be omitted */
-      justify-content: space-between;
+      justify-content: flex-start;
     }
 
     .container {
@@ -43,6 +43,7 @@
       text-align: center;
       background-color: #101010;
     }
+
     .text {
       text-align: justify;
     }
@@ -97,7 +98,7 @@
     <div id="header">
       <h1>Space Invaders</h1>
     </div>
-    <div id="container">
+    <div class="lr_container">
       <div class="container">
         <div id="div_GameCanvas">
         </div>
@@ -105,10 +106,36 @@
 
       <div class="container">
         <br>
-        <ul>
-          <li>Arrows to move &#8592; &#8594;</li>
-          <li>Spacebar to shoot</li>
-        </ul>
+        <div class="lr_container">
+          <div>
+            <ul>
+              <li>Arrows to move &#8592; &#8594;</li>
+              <li>Spacebar to shoot</li>
+              <li>R to restart</li>
+              <li>L turn on/off lazer</li>
+              <li>S turn on/off sound</li>
+              <li>F turn on/off frameRate</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Xs - Extra shot speed</li>
+              <li>Mt - Power multiplier</li>
+              <li>Cd - Cooldown</li>
+              <li>Pr - Pierce invaders</li>
+              <li>Hp - Ship HP (not in use)</li>
+              <li>Ss - Shot size</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>Red drops harm skill</li>
+              <li>Yellow help a litle</li>
+              <li>Green are what you want</li>
+            </ul>
+          </div>
+        </div>
+
         <br>
         <div class="text">
           <p>Shoot the invaders. A hit gives you points, and a miss makes you lose points.</p>
@@ -119,9 +146,9 @@
         <p>Good luck!</p>
       </div>
     </div>
-  <div id="footer">
-    Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
-  </div>
+    <div id="footer">
+      Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
+    </div>
   </div>
 </body>
 
