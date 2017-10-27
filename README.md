@@ -10,3 +10,6 @@ My take on space invaders using p5.js .
 | Add       | Menu screen             |                     | undone   |
 | Create    | Invaders attack         | to use ship hp      | undone   |
 | Change    | index page              |add glass effect     | on going |
+
+### "License"
+I mean, play it, change it, enjoy it, and tell me how to improve it!
