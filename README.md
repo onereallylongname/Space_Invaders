@@ -1,7 +1,7 @@
 # Space_Invaders
 My take on space invaders using p5.js .
 
-## Play at  
+## Play the game  
 [Space Invaders](http://onereallylongname.github.io/Space_Invaders)
 
 ### TODO
