@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <script type="text/javascript" src="lib/p5/p5.min.js"></script>
   <!-- <script type="text/javascript" src="lib/p5/p5.dom.min.js"></script> -->
   <script type="text/javascript" src="lib/p5/p5.sound.min.js"></script>
@@ -16,9 +16,13 @@
     body {
       margin: 0;
       padding: 0;
+      background-color: #101010;
     }
 
     .lr_container {
+      -webkit-columns: 2 200px;
+      -moz-columns: 2 200px;
+      columns: 2 200px;
       display: flex;
       /* establish flex container */
       flex-direction: row;
@@ -39,9 +43,7 @@
     }
 
     #wrapper {
-      height: 100%;
       text-align: center;
-      background-color: #101010;
     }
 
     .text {
@@ -71,7 +73,7 @@
     }
 
     #footer {
-      position: absolute;
+      position: fixed;
       width: 100%;
       bottom: 0;
       padding-bottom: 10px;
@@ -79,6 +81,7 @@
       border-top-right-radius: 50px;
       border-top-left-radius: 50px;
       text: white;
+      text-align: center;
       height: 30px;
       background-color: #7d8da5;
       background: -webkit-linear-gradient(#7f90a8, #5e6a7c);
@@ -109,7 +112,9 @@
         <div class="lr_container">
           <div>
             <ul>
-              <li><center>Controls</center></li>
+              <li>
+                <center>Controls</center>
+              </li>
               <li>Arrows to move &#8592; &#8594;</li>
               <li>Spacebar to shoot</li>
               <li>R to restart</li>
@@ -120,7 +125,9 @@
           </div>
           <div>
             <ul>
-              <li><center>Drop name</center></li>
+              <li>
+                <center>Drop name</center>
+              </li>
               <li>Xs - Extra shot speed</li>
               <li>Mt - Power multiplier</li>
               <li>Cd - Cooldown</li>
@@ -131,10 +138,12 @@
           </div>
           <div>
             <ul>
-              <li><center>Drop color</center></li>
-              <li>Red	&nbsp;	&nbsp;	&nbsp;	&nbsp;- harm skill</li>
-              <li>Yellow	&nbsp;- help a litle</li>
-              <li>Green	&nbsp;	&nbsp;- are what you want</li>
+              <li>
+                <center>Drop color</center>
+              </li>
+              <li>Red &nbsp; &nbsp; &nbsp; &nbsp;- harm skill</li>
+              <li>Yellow &nbsp;- help a litle</li>
+              <li>Green &nbsp; &nbsp;- are what you want</li>
             </ul>
           </div>
         </div>
@@ -149,9 +158,10 @@
         <p>Good luck!</p>
       </div>
     </div>
-    <div id="footer">
-      Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
-    </div>
+
+  </div>
+  <div id="footer">
+    Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
   </div>
 </body>
 
