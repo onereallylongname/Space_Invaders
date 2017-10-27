@@ -1,7 +1,8 @@
-### Rules v1.0
+### Rules v1.1
+##### Rules for commit and comments
 |Operation   | Meaning
 |------------|---------------------
-| -          | separator 
+| -          | separator
 | _L         | in line
 | _F         | file
 | _R         | reason
