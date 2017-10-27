@@ -2,7 +2,7 @@
 My take on space invaders using p5.js .
 
 ## Play at  
-[Space Invaders](onereallylongname.github.io/Space_Invaders)
+[Space Invaders](http://onereallylongname.github.io/Space_Invaders)
 
 ### TODO
 | Operation | What                    | Objective           | Status   |
