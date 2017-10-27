@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
   <script type="text/javascript" src="lib/p5/p5.min.js"></script>
   <!-- <script type="text/javascript" src="lib/p5/p5.dom.min.js"></script> -->
@@ -19,31 +20,41 @@
       background-color: #101010;
     }
 
+    #container1 {
+      margin: 0 auto;
+      float: left;
+      width: 53%;
+      min-width: 700px;
+    }
+
+    #container2 {
+      margin: 0 auto;
+      float: left;
+      width: 45%;
+      text-align: center;
+    }
+
+    #div_gamecanvas {
+      margin: 10px;
+    }
+
     .lr_container {
-      -webkit-columns: 2 200px;
-      -moz-columns: 2 200px;
-      columns: 2 200px;
       display: flex;
-      /* establish flex container */
-      flex-direction: row;
-      /* default value; can be omitted */
-      flex-wrap: nowrap;
-      /* default value; can be omitted */
-      justify-content: flex-start;
+      margin: 5px;
     }
 
-    .container {
-      margin: 20px;
-      color: white;
-    }
-
-    .container ul {
+    .lr_container ul {
       list-style-type: none;
       text-align: left;
     }
 
     #wrapper {
       text-align: center;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      color: white;
     }
 
     .text {
@@ -51,10 +62,15 @@
     }
 
     #header {
-      padding: 10px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      padding-bottom: 20px;
       border-bottom-right-radius: 50px;
       border-bottom-left-radius: 50px;
-      height: 50px;
+      height: 60px;
       background-color: #7d8da5;
       background: -webkit-linear-gradient(#5e6a7c, #7f90a8);
       /* For Safari 5.1 to 6.0 */
@@ -83,6 +99,7 @@
       text: white;
       text-align: center;
       height: 30px;
+      z-index: 1;
       background-color: #7d8da5;
       background: -webkit-linear-gradient(#7f90a8, #5e6a7c);
       /* For Safari 5.1 to 6.0 */
@@ -93,6 +110,15 @@
       background: linear-gradient(#7f90a8, #5e6a7c);
       /* Standard syntax */
     }
+
+    @media only screen and (max-width:720px) {
+      /* For mobile phones: */
+      #container1,
+      #container2 {
+        width: 100%;
+        align-self: center;
+      }
+    }
   </style>
 </head>
 
@@ -101,64 +127,63 @@
     <div id="header">
       <h1>Space Invaders</h1>
     </div>
-    <div class="lr_container">
-      <div class="container">
-        <div id="div_GameCanvas">
-        </div>
-      </div>
+    <div id="container1">
 
-      <div class="container">
-        <br>
-        <div class="lr_container">
-          <div>
-            <ul>
-              <li>
-                <center>Controls</center>
-              </li>
-              <li>Arrows to move &#8592; &#8594;</li>
-              <li>Spacebar to shoot</li>
-              <li>R to restart</li>
-              <li>L turn on/off lazer</li>
-              <li>S turn on/off sound</li>
-              <li>F turn on/off frameRate</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <center>Drop name</center>
-              </li>
-              <li>Xs - Extra shot speed</li>
-              <li>Mt - Power multiplier</li>
-              <li>Cd - Cooldown</li>
-              <li>Pr - Pierce invaders</li>
-              <li>Hp - Ship HP (not in use)</li>
-              <li>Ss - Shot size</li>
-            </ul>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <center>Drop color</center>
-              </li>
-              <li>Red &nbsp; &nbsp; &nbsp; &nbsp;- harm skill</li>
-              <li>Yellow &nbsp;- help a litle</li>
-              <li>Green &nbsp; &nbsp;- are what you want</li>
-            </ul>
-          </div>
-        </div>
-
-        <br>
-        <div class="text">
-          <p>Shoot the invaders. A hit gives you points, and a miss makes you lose points.</p>
-          <p>Your luck is tied to your accuracy, try not to miss.</p>
-          <p> NOTE: Allowing the use of the microphone improves the experience (no sound is recorded, but the the sound intensity is monitored to make the stars blink).</p>
-        </div>
-        <br>
-        <p>Good luck!</p>
+      <div id="div_GameCanvas">
       </div>
     </div>
+    <div id="container2">
 
+      <br>
+      <div class="lr_container">
+        <div>
+          <ul>
+            <li>
+              <center>Controls</center>
+            </li>
+            <li>Arrows to move &#8592; &#8594;</li>
+            <li>Spacebar to shoot</li>
+            <li>R to restart</li>
+            <li>L turn on/off lazer</li>
+            <li>S turn on/off sound</li>
+            <li>F turn on/off frameRate</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <center>Drop name</center>
+            </li>
+            <li>Xs - Extra shot speed</li>
+            <li>Mt - Power multiplier</li>
+            <li>Cd - Cooldown</li>
+            <li>Pr - Pierce invaders</li>
+            <li>Hp - Ship HP (not in use)</li>
+            <li>Ss - Shot size</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>
+              <center>Drop color</center>
+            </li>
+            <li>Red &nbsp; &nbsp; &nbsp; &nbsp;- harm skill</li>
+            <li>Yellow &nbsp;- help a litle</li>
+            <li>Green &nbsp; &nbsp;- are what you want</li>
+          </ul>
+        </div>
+      </div>
+
+      <br>
+      <div class="text">
+        <p>Shoot the invaders. A hit gives you points, and a miss makes you lose points.</p>
+        <p>Your luck is tied to your accuracy, try not to miss.</p>
+        <p> NOTE: Allowing the use of the microphone improves the experience (no sound is recorded, but the the sound intensity is monitored to make the stars blink).</p>
+      </div>
+      <br>
+      <p>Good luck!</p>
+    </div>
+  </div>
   </div>
   <div id="footer">
     Other projects @<a href="https://github.com/onereallylongname">GitHub</a>
