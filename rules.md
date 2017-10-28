@@ -3,6 +3,7 @@
 |Operation   | Meaning
 |------------|---------------------
 | -          | separator
+| ( ... )    | block, operation applies to block
 | _L         | in line
 | _F         | file
 | _R         | reason
@@ -21,5 +22,5 @@
 _OP1 and _OP2 -> _OP1_OP2 : _Add and _L -> _Add_L
 ##### Example
 ```
-git commit -m "_Add_F lib/new_file.txt - _Changed_F new_file.txt _L 15 _Add  way to say banana after transaction without baby knowing _O enjoy the ride"
+git commit -m "_Add_F lib/new_file.txt - _Changed_F new_file.txt _L 15 _Add  way to say banana after transaction without baby knowing _O enjoy the ride - _U_L 1 (_F file1 _F file2) _O describe file "
 ```
