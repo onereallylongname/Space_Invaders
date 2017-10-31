@@ -13,6 +13,7 @@
   <script type="text/javascript" src="lib/invader.js"></script>
   <script type="text/javascript" src="lib/sounds.js"></script>
   <script type="text/javascript" src="lib/stars.js"></script>
+  <script type="text/javascript" src="lib/button.js"></script>
   <style>
     * {
       box-sizing: border-box;
@@ -24,6 +25,9 @@
       background-color: #101010;
       text-align: center;
       text: white;
+    }
+    #div_GameCanvas canvas {
+      z-index: 4;
     }
 
     #glass img {
@@ -126,6 +130,7 @@
       .container1 {
         width: 100%;
         float: none;
+        margin-left: 0;
       }
     }
   </style>
@@ -190,7 +195,7 @@
         <div class="text">
           <p>Shoot the invaders. A hit gives you points, and a miss makes you lose points.</p>
           <p>Your luck is tied to your accuracy, try not to miss.</p>
-          <p> NOTE: Allowing the use of the microphone improves the experience (no sound is recorded, but the the sound intensity is monitored to make the stars blink).</p>
+          <p> NOTE: Allowing the use of the microphone improves the experience (no sound is recorded, but the the sound intensity is monitored to make the stars blink). In the future sound might influence gameplay.</p>
 
         </div>
 
