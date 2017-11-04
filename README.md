@@ -5,14 +5,14 @@ My take on space invaders using p5.js .
 [Space Invaders](http://onereallylongname.github.io/Space_Invaders)
 
 ### TODO
-| Operation | What                      | Objective             | Status   | Date     |
-|-----------|---------------------------|-----------------------|----------|----------|
+| Operation | What                      | Objective             | Status   | Date     | Missing
+|-----------|---------------------------|-----------------------|----------|----------|--------
 | Add       | Level system              |                       | undone   |          |
 | Add       | Levels                    | 5lvs                  | undone   |          |
 | Add       | Menu screen               |                       | undone   |          |
 | Create    | Invaders attack           | to use ship hp        | undone   |          |
 | Add       | Difficulty based on music | sound to dif. concept | undone   |          |
-| Add       | Touch screen controls     |                       | ongoing  |          |
+| Add       | Touch screen controls     | play on tablet        | ongoing  |          | Buttons to change sound, fr etc...
 | Change    | index page                |add glass effect       | Done     | 28/10/17 |
 
 ### "License"
