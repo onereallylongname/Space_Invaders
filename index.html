@@ -55,6 +55,10 @@
       margin-bottom: 30px;
     }
 
+    .hide_controls {
+      visibility: hidden;
+    }
+
     .lr_container {
       display: flex;
       margin: auto;
@@ -137,6 +141,10 @@
       #glass img {
         visibility: hidden;
       }
+      .hide_controls {
+        visibility: visible;
+        display: inline;
+      }
     }
   </style>
 </head>
@@ -153,7 +161,8 @@
       <div id="div_GameCanvas">
       </div>
       <div class="container1">
-        <input type="checkbox" id="tablet_controls_on" onclick="changeTabletButtons();"> Show tablet controls
+        <input type="checkbox" class="hide_controls" id="tablet_controls_on" onclick="changeTabletButtons();">
+        <p class="hide_controls">Show tablet controls</p>
       </div>
     </div>
     <div class="container1">
